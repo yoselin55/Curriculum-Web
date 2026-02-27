@@ -83,42 +83,45 @@ const GroupIcons = {
   ),
 }
 
+// ── SKILL_GROUPS CORREGIDO ────────────────────────────────────────────────────
+// HTML y CSS movidos de "Lenguajes de Programación" a "Frontend & Estilos"
 const SKILL_GROUPS = [
   {
     label: 'Lenguajes de Programación', iconKey: 'code', color: colors.primary,
     items: [
-      { name: 'Python', icon: 'python/python-original.svg', level: 85 },
-      { name: 'Java', icon: 'java/java-original.svg', level: 80 },
-      { name: 'C++', icon: 'cplusplus/cplusplus-original.svg', level: 75 },
-      { name: 'HTML5', icon: 'html5/html5-original.svg', level: 95 },
-      { name: 'CSS3', icon: 'css3/css3-original.svg', level: 90 },
+      { name: 'Python',     icon: 'python/python-original.svg',         level: 85 },
+      { name: 'Java',       icon: 'java/java-original.svg',             level: 80 },
+      { name: 'C++',        icon: 'cplusplus/cplusplus-original.svg',   level: 75 },
       { name: 'JavaScript', icon: 'javascript/javascript-original.svg', level: 85 },
+      { name: 'PHP',        icon: 'php/php-original.svg',               level: 65 },
     ]
   },
   {
-    label: 'Frameworks & Librerías', iconKey: 'layers', color: colors.secondary,
+    label: 'Frontend & Estilos', iconKey: 'layers', color: colors.secondary,
     items: [
-      { name: 'React', icon: 'react/react-original.svg', level: 80 },
-      { name: 'Tailwind', icon: 'tailwindcss/tailwindcss-original.svg', level: 85 },
-      { name: 'JavaFX', icon: 'java/java-original.svg', level: 75 },
-      { name: 'OpenCV', icon: 'opencv/opencv-original.svg', level: 70 },
+      { name: 'HTML5',    icon: 'html5/html5-original.svg',                   level: 95 },
+      { name: 'CSS3',     icon: 'css3/css3-original.svg',                     level: 90 },
+      { name: 'React',    icon: 'react/react-original.svg',                   level: 80 },
+      { name: 'Tailwind', icon: 'tailwindcss/tailwindcss-original.svg',       level: 85 },
+      { name: 'JavaFX',   icon: 'java/java-original.svg',                     level: 75 },
+      { name: 'OpenCV',   icon: 'opencv/opencv-original.svg',                 level: 70 },
     ]
   },
   {
     label: 'Herramientas & IDEs', iconKey: 'wrench', color: colors.accent,
     items: [
-      { name: 'VS Code', icon: 'vscode/vscode-original.svg', level: 90 },
-      { name: 'Git', icon: 'git/git-original.svg', level: 85 },
-      { name: 'GitHub', icon: 'github/github-original.svg', level: 85 },
-      { name: 'Figma', icon: 'figma/figma-original.svg', level: 80 },
-      { name: 'IntelliJ', icon: 'intellij/intellij-original.svg', level: 75 },
-      { name: 'Kali Linux', icon: 'linux/linux-original.svg', level: 70 },
+      { name: 'VS Code',    icon: 'vscode/vscode-original.svg',   level: 90 },
+      { name: 'Git',        icon: 'git/git-original.svg',         level: 85 },
+      { name: 'GitHub',     icon: 'github/github-original.svg',   level: 85 },
+      { name: 'Figma',      icon: 'figma/figma-original.svg',     level: 80 },
+      { name: 'IntelliJ',   icon: 'intellij/intellij-original.svg', level: 75 },
+      { name: 'Kali Linux', icon: 'linux/linux-original.svg',     level: 70 },
     ]
   },
   {
     label: 'Bases de Datos', iconKey: 'database', color: colors.success,
     items: [
-      { name: 'MySQL', icon: 'mysql/mysql-original.svg', level: 80 },
+      { name: 'MySQL',      icon: 'mysql/mysql-original.svg',         level: 80 },
       { name: 'PostgreSQL', icon: 'postgresql/postgresql-original.svg', level: 75 },
     ]
   }
@@ -182,10 +185,10 @@ const CertIcons = {
 }
 
 const CERTIFICATIONS = [
-  { title: 'Introducción a la Ciberseguridad', date: 'Nov 2025', issuer: 'Cisco', iconKey: 'lock', pdf: pdfCiber, color: colors.primary },
-  { title: 'Exploración de Redes Cisco', date: 'Sep 2025', issuer: 'Cisco', iconKey: 'network', pdf: pdfRedes, color: colors.secondary },
-  { title: 'Packet Tracer - Nivel Avanzado', date: 'Sep 2025', issuer: 'Cisco', iconKey: 'server', pdf: pdfPacket, color: colors.accent },
-  { title: 'Conciencia Digital', date: 'Oct 2025', issuer: 'Cisco', iconKey: 'shield', pdf: pdfDigital, color: colors.success },
+  { title: 'Introducción a la Ciberseguridad', date: 'Nov 2025', issuer: 'Cisco', iconKey: 'lock',    pdf: pdfCiber,   color: colors.primary   },
+  { title: 'Exploración de Redes Cisco',        date: 'Sep 2025', issuer: 'Cisco', iconKey: 'network', pdf: pdfRedes,   color: colors.secondary },
+  { title: 'Packet Tracer - Nivel Avanzado',    date: 'Sep 2025', issuer: 'Cisco', iconKey: 'server',  pdf: pdfPacket,  color: colors.accent    },
+  { title: 'Conciencia Digital',                date: 'Oct 2025', issuer: 'Cisco', iconKey: 'shield',  pdf: pdfDigital, color: colors.success   },
 ]
 
 export default function App() {
@@ -282,7 +285,6 @@ export default function App() {
           background: ${darkMode ? 'rgba(10,10,15,0.8)' : 'rgba(255,255,255,0.8)'};
         }
 
-        
         .navbar {
           position: fixed;
           top: 16px; left: 50%; transform: translateX(-50%);
@@ -328,7 +330,6 @@ export default function App() {
         }
         .theme-btn:hover { background: ${colors.primary}; color: white; }
 
-        
         .hamburger {
           display: none; flex-direction: column; gap: 5px;
           background: none; border: none; padding: 4px; flex-shrink: 0;
@@ -341,7 +342,6 @@ export default function App() {
         .hamburger.open span:nth-child(2) { opacity: 0; }
         .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-        
         .mobile-menu {
           display: none; position: fixed;
           top: 78px; left: 0; right: 0;
@@ -370,7 +370,6 @@ export default function App() {
         }
         .mobile-theme-btn:hover { background: ${colors.primary}; color: white; }
 
-        
         .image-wrapper { position: relative; width: 100%; max-width: 500px; margin: 0 auto; }
         .image-container {
           position: relative; width: 100%; height: 600px;
@@ -401,14 +400,12 @@ export default function App() {
         .badge-1 { top: 30px; left: -20px; border-left: 4px solid ${colors.primary}; animation: float 6s ease-in-out infinite; }
         .badge-2 { bottom: 30px; right: -20px; border-right: 4px solid ${colors.success}; animation: float 7s ease-in-out infinite reverse; }
 
-
         @media (max-width: 900px) {
           .nav-desktop-links { gap: 16px; }
           .nav-desktop-links a { font-size: 0.85rem; }
           .theme-btn { padding: 7px 14px; font-size: 0.82rem; }
         }
 
-        
         @media (max-width: 768px) {
           .nav-desktop-links { display: none; }
           .theme-btn { display: none; }
@@ -429,7 +426,6 @@ export default function App() {
           .projects-grid { grid-template-columns: 1fr !important; }
         }
 
-        
         @media (max-width: 480px) {
           .navbar { top: 10px; padding: 10px 18px; width: 96%; }
           .mobile-menu { top: 70px; }
@@ -441,13 +437,12 @@ export default function App() {
           .certs-grid { grid-template-columns: 1fr !important; }
         }
 
-        
         @media (max-width: 360px) {
           .image-container { height: 270px; }
         }
       `}</style>
 
-      
+      {/* Cursor personalizado */}
       <div style={{
         position: 'fixed', left: mousePosition.x, top: mousePosition.y,
         width: cursorVariant === 'hover' ? 60 : 20,
@@ -469,26 +464,22 @@ export default function App() {
         )}
       </div>
 
-      
+      {/* Navbar */}
       <nav className="navbar glass"
         onMouseEnter={() => setCursorVariant('hover')}
         onMouseLeave={() => setCursorVariant('default')}
       >
         <div className="navbar-inner">
           <a className="nav-logo" href="#home">YF</a>
-
           <div className="nav-desktop-links">
             {navLinks.map(([label, href]) => (
               <a key={label} href={href}
                 className={activeSection === href.slice(1) ? 'active' : ''}
                 onMouseEnter={() => setCursorVariant('hover')}
                 onMouseLeave={() => setCursorVariant('default')}
-              >
-                {label}
-              </a>
+              >{label}</a>
             ))}
           </div>
-
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             <button className="theme-btn" onClick={() => setDarkMode(!darkMode)}
               onMouseEnter={(e) => { e.target.style.background = colors.primary; e.target.style.color = 'white'; setCursorVariant('hover') }}
@@ -516,15 +507,13 @@ export default function App() {
         </div>
       </nav>
 
-      
+      {/* Menú móvil */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         {navLinks.map(([label, href]) => (
           <a key={label} href={href}
             className={activeSection === href.slice(1) ? 'active' : ''}
             onClick={() => setMenuOpen(false)}
-          >
-            {label}
-          </a>
+          >{label}</a>
         ))}
         <button className="mobile-theme-btn" onClick={() => { setDarkMode(!darkMode); setMenuOpen(false) }}>
           <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
@@ -542,7 +531,7 @@ export default function App() {
         </button>
       </div>
 
-      
+      {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <section id="home" className="hero-section"
         style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden', background: theme.bg, color: theme.text, padding: '100px 20px 60px' }}
       >
@@ -551,8 +540,6 @@ export default function App() {
 
         <div style={{ maxWidth: 1200, margin: '0 auto', width: '100%' }}>
           <div className="hero-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center' }}>
-
-            
             <div>
               <AnimatedSection delay={0.2}>
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '10px 25px', background: `linear-gradient(135deg, ${colors.primary}20, ${colors.accent}20)`, borderRadius: 30, color: colors.primary, fontSize: '0.9rem', fontWeight: 500, marginBottom: 20, border: `1px solid ${colors.primary}40` }}>
@@ -599,9 +586,9 @@ export default function App() {
               <AnimatedSection delay={1} direction="up">
                 <div className="hero-stats" style={{ display: 'flex', gap: 50, marginTop: 50, flexWrap: 'wrap' }}>
                   {[
-                    { number: '4+', label: 'Proyectos', color: colors.primary },
+                    { number: '4+', label: 'Proyectos',    color: colors.primary   },
                     { number: '5+', label: 'Certificados', color: colors.secondary },
-                    { number: '8+', label: 'Tecnologías', color: colors.accent }
+                    { number: '8+', label: 'Tecnologías',  color: colors.accent    }
                   ].map((stat, i) => (
                     <div key={i}>
                       <div style={{ fontSize: '2.5rem', fontWeight: 700, color: stat.color }}>{stat.number}</div>
@@ -612,17 +599,13 @@ export default function App() {
               </AnimatedSection>
             </div>
 
-            
             <AnimatedSection delay={0.6} direction="right" className="hero-image-col">
               <div className="image-wrapper">
                 <div className="image-container"
                   onMouseEnter={() => { setCursorVariant('hover'); setImageHover(true) }}
                   onMouseLeave={() => { setCursorVariant('default'); setImageHover(false) }}
                 >
-                  <img
-                    src={perfil}
-                    alt="Yoselin Flores"
-                    className="profile-image"
+                  <img src={perfil} alt="Yoselin Flores" className="profile-image"
                     onLoad={() => setImageLoaded(true)}
                     style={{ opacity: imageLoaded ? 1 : 0, transition: 'opacity 0.5s ease, transform 1.2s ease' }}
                   />
@@ -659,7 +642,6 @@ export default function App() {
           </div>
         </div>
 
-        
         <div style={{ position: 'absolute', bottom: 30, left: '50%', transform: 'translateX(-50%)', animation: 'pulse 2s ease-in-out infinite' }}>
           <div style={{ width: 30, height: 50, border: `2px solid ${theme.textMuted}`, borderRadius: 25 }}>
             <div style={{ width: 4, height: 10, background: colors.primary, borderRadius: 2, margin: '8px auto', animation: 'float 1.5s ease-in-out infinite' }} />
@@ -667,7 +649,7 @@ export default function App() {
         </div>
       </section>
 
-      
+      {/* ── SOBRE MÍ ──────────────────────────────────────────────────────────── */}
       <section id="sobre-mi" className="section-pad" style={{ padding: '100px 20px', background: theme.bg2, color: theme.text }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <AnimatedSection>
@@ -699,10 +681,10 @@ export default function App() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20, height: '100%' }}>
                 <div className="stats-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
                   {[
-                    { number: '4+', label: 'Proyectos\ncompletados', color: colors.primary },
-                    { number: '5+', label: 'Certificados\nobtenidos', color: colors.secondary },
-                    { number: '8+', label: 'Tecnologías\ndominadas', color: colors.accent },
-                    { number: '2+', label: 'Años de\nexperiencia', color: colors.success }
+                    { number: '4+', label: 'Proyectos\ncompletados',  color: colors.primary   },
+                    { number: '5+', label: 'Certificados\nobtenidos',  color: colors.secondary },
+                    { number: '8+', label: 'Tecnologías\ndominadas',   color: colors.accent    },
+                    { number: '2+', label: 'Años de\nexperiencia',     color: colors.success   }
                   ].map((stat, i) => (
                     <div key={i}
                       style={{ background: theme.card, padding: 30, borderRadius: 20, border: `1px solid ${theme.border}`, textAlign: 'center', transition: 'all 0.3s ease' }}
@@ -745,7 +727,7 @@ export default function App() {
         </div>
       </section>
 
-      
+      {/* ── HABILIDADES ───────────────────────────────────────────────────────── */}
       <section id="habilidades" className="section-pad" style={{ padding: '100px 20px', background: theme.bg, color: theme.text }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <AnimatedSection>
@@ -806,7 +788,7 @@ export default function App() {
         </div>
       </section>
 
-      
+      {/* ── PROYECTOS ─────────────────────────────────────────────────────────── */}
       <section id="proyectos" className="section-pad" style={{ padding: '100px 20px', background: theme.bg2, color: theme.text }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <AnimatedSection>
@@ -839,7 +821,8 @@ export default function App() {
                     </div>
                   )}
                   <div style={{ height: 200, overflow: 'hidden', position: 'relative' }}>
-                    <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
+                    <img src={project.image} alt={project.title}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
                       onMouseEnter={(e) => { e.target.style.transform = 'scale(1.1)' }}
                       onMouseLeave={(e) => { e.target.style.transform = 'scale(1)' }}
                     />
@@ -866,7 +849,7 @@ export default function App() {
         </div>
       </section>
 
-      
+      {/* ── CERTIFICACIONES ───────────────────────────────────────────────────── */}
       <section id="certs" className="section-pad" style={{ padding: '100px 20px', background: theme.bg, color: theme.text }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <AnimatedSection>
@@ -904,7 +887,7 @@ export default function App() {
         </div>
       </section>
 
-      
+      {/* ── EDUCACIÓN ─────────────────────────────────────────────────────────── */}
       <section className="section-pad" style={{ padding: '100px 20px', background: theme.bg2, color: theme.text }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <AnimatedSection>
@@ -946,7 +929,7 @@ export default function App() {
         </div>
       </section>
 
-      
+      {/* ── CONTACTO ──────────────────────────────────────────────────────────── */}
       <section id="contacto" className="section-pad" style={{ padding: '100px 20px', background: theme.bg, color: theme.text, position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '80%', height: '80%', background: `radial-gradient(circle, ${colors.primary}10, transparent 70%)`, filter: 'blur(60px)', zIndex: 0, pointerEvents: 'none' }} />
 
